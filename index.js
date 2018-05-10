@@ -38,10 +38,9 @@ function exactMatchToList(drivers, object) {
   drivers.filter(function(driver) {
     for (let key in driver) {
       if (driver[key] === object[key]) {
-        matches.push(driver);
+        matches.push(driver.name);
       }
     }
   })
   return matches;
 }
-
