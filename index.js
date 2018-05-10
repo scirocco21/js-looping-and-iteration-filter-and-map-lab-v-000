@@ -21,12 +21,20 @@ function driverNamesWithRevenueOver(drivers, revenue) {
     return driver.revenue > parseInt(revenue)}).map(function(driver) {return driver.name});
 }
 
-function attributeFilter(driver, {key: value}) {
-  if (driver.hasOwnProperty('key') && driver['key'] === value) {
-    return driver;
-  }
+function exactMatch(drivers, {object}) {
+  let matches = [];
+  return drivers.filter(function(driver) {
+    for (key in driver) {
+      if (driver[key] === object[key]) {
+        matches.push(driver);
+      }
+    } 
+  })
 }
 
-function exactMatch(drivers, {key: value}) {
-  return drivers.filter(attributeFilter;
-}
+let match = [];
++    drivers.filter(driver => {
++		for (let key in obj ) {
++			if (obj[key] === driver[key]) {
++				match.push(driver);
++			}
