@@ -28,13 +28,6 @@ function exactMatch(drivers, {object}) {
       if (driver[key] === object[key]) {
         matches.push(driver);
       }
-    } 
+    }
   })
 }
-
-let match = [];
-+    drivers.filter(driver => {
-+		for (let key in obj ) {
-+			if (obj[key] === driver[key]) {
-+				match.push(driver);
-+			}
