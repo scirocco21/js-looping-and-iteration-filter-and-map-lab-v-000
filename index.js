@@ -1,20 +1,24 @@
 // Code your solution here:
 function driversWithRevenueOver(drivers, revenue) {
-  const selectedDrivers = [];
-  drivers.map(function(driver){
-    if (parseInt(driver.revenue) > parseInt(revenue)){
-      selectedDrivers.push(driver);
-    }
+  return drivers.filter(function(driver){
+    return parseInt(driver.revenue) > parseInt(revenue)
   });
-  return selectedDrivers;
 }
+// longer solution with 'map' array method:
+
+// function driversWithRevenueOver(drivers, revenue) {
+//   const selectedDrivers = [];
+//   drivers.map(function(driver){
+//     if (parseInt(driver.revenue) > parseInt(revenue)){
+//       selectedDrivers.push(driver);
+//     }
+//   });
+//   return selectedDrivers;
+// }
 
 function driverNamesWithRevenueOver(drivers, revenue) {
-  const selectedDrivers = [];
-  drivers.filter(function(driver){
+  return drivers.filter(function(driver){
     return driver.revenue > parseInt(revenue)){
-      selectedDrivers.push(driver.name);
-    }
+    }.map(function(driver) {driver.name})
   });
-  return selectedDrivers;
 }
