@@ -36,6 +36,7 @@ function exactMatch(drivers, object) {
 function exactMatchToList(drivers, object) {
   let matches = [];
   drivers.filter(function(driver) {
+    // iterate over the keys of the individual array elements to see if there are any matches
     for (let key in driver) {
       if (driver[key] === object[key]) {
         matches.push(driver.name);
