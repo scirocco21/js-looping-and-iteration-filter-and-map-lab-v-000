@@ -18,4 +18,3 @@ function driverNamesWithRevenueOver(drivers, revenue) {
   });
   return selectedDrivers;
 }
-}
