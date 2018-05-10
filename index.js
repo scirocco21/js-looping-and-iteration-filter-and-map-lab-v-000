@@ -32,3 +32,16 @@ function exactMatch(drivers, object) {
   })
   return matches;
 }
+
+function exactMatchToList(drivers, object) {
+  let matches = [];
+  drivers.filter(function(driver) {
+    for (let key in driver) {
+      if (driver[key] === object[key]) {
+        matches.push(driver);
+      }
+    }
+  })
+  return matches;
+}
+
