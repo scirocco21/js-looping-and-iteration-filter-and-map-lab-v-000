@@ -22,7 +22,7 @@ function driverNamesWithRevenueOver(drivers, revenue) {
 }
 
 function attributeFilter(driver, {key: value}) {
-  if ('key' in driver && driver['key'] === value) {
+  if (driver.hasOwnProperty('key') && driver['key'] === value) {
     return driver;
   }
 }
