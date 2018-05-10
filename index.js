@@ -28,7 +28,5 @@ function attributeFilter(driver, {key: value}) {
 }
 
 function exactMatch(drivers, {key: value}) {
-  return drivers.filter(function(driver) {
-    return driver[key] === value;
-  })
+  return drivers.filter(attributeFilter(driver, {key: value}));
 }
