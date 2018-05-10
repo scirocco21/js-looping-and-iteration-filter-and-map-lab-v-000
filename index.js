@@ -23,7 +23,7 @@ function driverNamesWithRevenueOver(drivers, revenue) {
 
 function exactMatch(drivers, object) {
   let matches = [];
-  return drivers.filter(function(driver) {
+  drivers.filter(function(driver) {
     for (let key in driver) {
       if (driver[key] === object[key]) {
         matches.push(driver);
