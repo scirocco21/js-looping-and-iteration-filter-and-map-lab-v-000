@@ -30,4 +30,5 @@ function exactMatch(drivers, object) {
       }
     }
   })
+  return matches;
 }
