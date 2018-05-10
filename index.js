@@ -21,7 +21,7 @@ function driverNamesWithRevenueOver(drivers, revenue) {
     return driver.revenue > parseInt(revenue)}).map(function(driver) {return driver.name});
 }
 
-function exactMatch(drivers, {object}) {
+function exactMatch(drivers, object) {
   let matches = [];
   return drivers.filter(function(driver) {
     for (key in driver) {
