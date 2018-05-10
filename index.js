@@ -21,6 +21,12 @@ function driverNamesWithRevenueOver(drivers, revenue) {
     return driver.revenue > parseInt(revenue)}).map(function(driver) {return driver.name});
 }
 
+function attributeFilter(driver, {key: value}) {
+  if ('key' in driver && driver['key'] === value) {
+    return driver;
+  }
+}
+
 function exactMatch(drivers, {key: value}) {
   return drivers.filter(function(driver) {
     return driver[key] === value;
